@@ -1,0 +1,28 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A friend matching application built using Node.js and Express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelle-88/FriendFinder.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "javascript"
+  ],
+  "author": "Michelle Mesorana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michelle-88/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/michelle-88/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
