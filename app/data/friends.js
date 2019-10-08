@@ -3,8 +3,8 @@
 
 var friends = [
     {
-        "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "name":"Amy",
+        "photo":"https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "scores":[
             5,
             1,
@@ -17,7 +17,104 @@ var friends = [
             4,
             1
           ]
+    },
+    {
+        "name":"Shannon",
+        "photo":"https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "scores":[
+            4,
+            2,
+            5,
+            1,
+            3,
+            2,
+            2,
+            1,
+            3,
+            2
+          ]
+    },
+    {
+        "name":"Marcus",
+        "photo":"https://images.pexels.com/photos/936119/pexels-photo-936119.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "scores":[
+            5,
+            2,
+            2,
+            2,
+            4,
+            1,
+            3,
+            2,
+            5,
+            5
+          ]
+    },
+    {
+        "name":"Tony",
+        "photo":"https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "scores":[
+            3,
+            3,
+            4,
+            2,
+            2,
+            1,
+            3,
+            2,
+            2,
+            3
+          ]
+    },
+    {
+        "name":"Christina",
+        "photo":"https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "scores":[
+            4,
+            3,
+            4,
+            1,
+            5,
+            2,
+            5,
+            3,
+            1,
+            4
+          ]
+    },
+    {
+        "name":"Dylan",
+        "photo":"https://images.pexels.com/photos/1036627/pexels-photo-1036627.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "scores":[
+            4,
+            4,
+            2,
+            3,
+            2,
+            2,
+            3,
+            2,
+            4,
+            5
+          ]
+    },
+    {
+        "name":"David",
+        "photo":"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "scores":[
+            5,
+            3,
+            5,
+            1,
+            3,
+            2,
+            4,
+            2,
+            5,
+            1
+          ]
     }
+
 ];
 
 module.exports = friends;
