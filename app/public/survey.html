@@ -4,12 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+    <title>Survey</title>
 </head>
 <body>
-    <h1>Survey</h1>
-    <a href="/">Home</a>
+<div class="container">
+    <form class="border border-light p-5">
+        <div class="text-center">
+            <h1 class="text-center deep-purple-text"><strong>Friend Finder Survey</strong></h1>
+        </div>
+    
+        <p class="lead my-4">Please provide the following details.</p>
 
+        <label for="userName"><strong>Name</strong> <em>(Required)</em></label>
+        <input type="text" id="userName" class="form-control mb-4" placeholder="Name" required>
+    
+        <label for="imgLink"><strong>Link to Photo Image</strong> <em>(Required)</em></label>
+        <input type="text" id="imgLink" class="form-control mb-5" required>
+    
+
+        <hr>
+
+        <p class="lead my-4">Please select a number between 1 and 5 for the following questions.</p>
+
+        <p class="h5">1. I see myself as extraverted, enthusiastic.</p>
+        <select class="browser-default custom-select mb-4" id="q1">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+    
+        <p class="h5">2. I see myself as critical, quarrelsome.</p>
+        <select class="browser-default custom-select mb-4" id="q2">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <p class="h5">3. I see myself as dependable, self-disciplined.</p>
+        <select class="browser-default custom-select mb-4" id="q3">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <p class="h5">4. I see myself as anxious, easily upset.</p>
+        <select class="browser-default custom-select mb-4" id="q4">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <p class="h5">5. I see myself as open to new experiences, complex.</p>
+        <select class="browser-default custom-select mb-4" id="q5">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <p class="h5">6. I see myself as reserved, quiet.</p>
+        <select class="browser-default custom-select mb-4" id="q6">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <p class="h5">7. I see myself as sympathetic, warm.</p>
+        <select class="browser-default custom-select mb-4" id="q7">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <p class="h5">8. I see myself as disorganized, careless.</p>
+        <select class="browser-default custom-select mb-4" id="q8">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <p class="h5">9. I see myself as calm, emotionally stable.</p>
+        <select class="browser-default custom-select mb-4" id="q9">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <p class="h5">10. I see myself as conventional, uncreative.</p>
+        <select class="browser-default custom-select mb-4" id="q10">
+            <option value="">Choose your answer</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+        <button class="btn btn-info btn-block purple-gradient" type="submit">Submit</button>
+    </form>
+</div>
     <script>
         // Client side JS to grab form data
     
