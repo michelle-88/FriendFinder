@@ -22,9 +22,9 @@
 </head>
 <body>
 <div class="container">
-    <form class="border border-light p-5">
+    <form class="border border-light p-5 mb-3">
         <div class="text-center">
-            <h1 class="text-center deep-purple-text"><strong>Friend Finder Survey</strong></h1>
+            <h1 class="text-center purple-text"><strong>Friend Finder Survey</strong></h1>
         </div>
     
         <p class="lead my-4">Please provide the following details.</p>
@@ -140,11 +140,59 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <button class="btn btn-info btn-block purple-gradient" type="submit">Submit</button>
+        <button id="add-btn" class="btn btn-info btn-block purple-gradient" type="submit">Submit</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title white-text" id="errorModalLabel">You've Been Matched With...</h5>
+              <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn purple-gradient" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </form>
+
+    <a href="/api/friends">API Friends List</a>
 </div>
     <script>
         // Client side JS to grab form data
+        $("#add-btn").on("click", function(event) {
+            event.preventDefault();
+
+            var newFriend = {
+                name: $("#userName").val().trim(),
+                photo: $("#imgLink").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+
+            $.post("/api/friends", newFriend).then(function(data) {
+                console.log("Survey submitted", data);
+            })
+        });
+
     
     
     
