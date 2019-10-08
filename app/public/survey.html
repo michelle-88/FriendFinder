@@ -145,7 +145,7 @@
         <!-- Modal -->
         <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
+        <div class="modal-dialog modal-notify modal-info" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title white-text" id="errorModalLabel">You've Been Matched With...</h5>
@@ -154,7 +154,9 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <h1 class="text-center"><span id="matchName"></span></h1>
+
+              <img alt="Match Photo" id="matchPic" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto;">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn purple-gradient" data-dismiss="modal">Close</button>
@@ -188,14 +190,17 @@
                 ]
             };
 
-            $.post("/api/friends", newFriend).then(function(data) {
-                console.log("Survey submitted", data);
-            })
-        });
+            // **data** will have friend match (res from server)
+            // use this to fill out modal and show modal
+            $.post("/api/friends", newFriend, function(data) {
+                console.log(data);
 
-    
-    
-    
+                $("#matchName").text(data.name);
+                $("#matchPic").attr("src", data.photo);
+                $("#matchModal").modal("show");
+
+            });
+        });
     </script>
 </body>
 </html>

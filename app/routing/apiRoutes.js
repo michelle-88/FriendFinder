@@ -7,6 +7,10 @@ module.exports = function(app) {
     });
 
     app.post("/api/friends", function(req, res) {
+
+        var newFriend = req.body;
+
+        return res.json(friends[0])
         // write logic here to compare new friend to friends in array
         // 2 for loops - one to loop thru each user and then another to loop thru each user's scores array property
         // while looping thru the scores array, find difference between user and new user's scores
