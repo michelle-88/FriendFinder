@@ -30,16 +30,16 @@
         <p class="lead my-4">Please provide the following details.</p>
 
         <label for="userName"><strong>Name</strong> <em>(Required)</em></label>
-        <input type="text" id="userName" class="form-control mb-4" placeholder="Name" required>
+        <input type="text" id="userName" class="form-control mb-4" placeholder="Name">
     
         <label for="imgLink"><strong>Link to Photo Image</strong> <em>(Required)</em></label>
-        <input type="text" id="imgLink" class="form-control mb-5" required>
+        <input type="text" id="imgLink" class="form-control mb-5">
     
-
         <hr>
 
         <p class="lead my-4">Please select a number between 1 and 5 for the following questions.</p>
 
+        <div class="col-lg-6 col-12">
         <p class="h5">1. I see myself as extraverted, enthusiastic.</p>
         <select class="browser-default custom-select mb-4" id="q1">
             <option value="">Choose your answer</option>
@@ -139,10 +139,11 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
+        </div>
 
         <button id="add-btn" class="btn btn-info btn-block purple-gradient" type="submit">Submit</button>
 
-        <!-- Modal -->
+        <!-- Friend Match Modal -->
         <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-notify modal-info" role="document">
@@ -164,6 +165,26 @@
           </div>
         </div>
       </div>
+
+    <!-- Error Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h4 class="modal-title w-100" id="errorModalLabel">No Match Found</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            Please complete all fields before submitting.
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn purple-gradient" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+    </div>
+    </div>
     </form>
 
     <a href="/api/friends">API Friends List</a>
@@ -173,6 +194,26 @@
         $("#add-btn").on("click", function(event) {
             event.preventDefault();
 
+            // Form validation to ensure that user provides a name, image link, and answers the survey questions
+            function checkInput() {
+                var complete = true;
+                $(".form-control").each(function() {
+                    if($(this).val() === "") {
+                        complete = false;
+                    }
+                });
+
+                $(".custom-select").each(function() {
+                    if($(this).val() === "") {
+                        complete = false;
+                    }
+                });
+
+                return complete;
+            }
+
+            // If all fields were completed by the user, create a new object with the data from the survey
+            if(checkInput()) {
             var newFriend = {
                 name: $("#userName").val().trim(),
                 photo: $("#imgLink").val().trim(),
@@ -200,6 +241,12 @@
                 $("#matchModal").modal("show");
 
             });
+        }
+
+        else {
+            $("#errorModal").modal("show");
+        }
+
         });
     </script>
 </body>
