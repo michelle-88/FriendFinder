@@ -19,9 +19,16 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
     <title>Survey</title>
+    <style>
+        body {
+            background-image: url("https://hdwallsource.com/img/2014/9/gradient-wallpaper-26043-26728-hd-wallpapers.jpg");
+            background-size: cover;
+        }
+        .container {background-color: white;}
+    </style>
 </head>
 <body>
-<div class="container">
+<div class="container z-depth-3">
     <form class="border border-light p-5 mb-3">
         <div class="text-center">
             <h1 class="text-center purple-text"><strong>Friend Finder Survey</strong></h1>
@@ -141,12 +148,12 @@
         </select>
         </div>
 
-        <button id="add-btn" class="btn btn-info btn-block purple-gradient" type="submit">Submit</button>
+        <button id="add-btn" class="btn btn-info btn-block ripe-malinka-gradient" type="submit">Submit</button>
 
         <!-- Friend Match Modal -->
         <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-notify modal-info" role="document">
+        <div class="modal-dialog modal-notify modal-warning" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title white-text" id="errorModalLabel">You've Been Matched With...</h5>
@@ -160,7 +167,7 @@
               <img alt="Match Photo" id="matchPic" style="width: 75%; height: auto; display: block; margin-left: auto; margin-right: auto;">
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn purple-gradient" data-dismiss="modal">Close</button>
+              <button type="button" class="btn white-text ripe-malinka-gradient" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -180,14 +187,14 @@
             Please complete all fields before submitting.
         </div>
         <div class="modal-footer">
-        <button type="button" class="btn purple-gradient" data-dismiss="modal">Close</button>
+        <button type="button" class="btn white-text ripe-malinka-gradient" data-dismiss="modal">Close</button>
         </div>
     </div>
     </div>
     </div>
     </form>
 
-    <a href="/api/friends">API Friends List</a>
+    <a href="/api/friends">API Friends List</a> | <a href="/">Home</a>
 </div>
     <script>
         // Client side JS to grab form data
