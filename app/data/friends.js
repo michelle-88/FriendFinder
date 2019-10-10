@@ -1,5 +1,4 @@
-// Create 5-10 dummy friend objects
-// Should be structured as an array of friend objects in JSON
+// Array of 'friend' objects that will be accessed via /api/friends route
 
 var friends = [
     {
@@ -117,4 +116,5 @@ var friends = [
 
 ];
 
+// Export friends array so it may be utilized in apiRoutes.js file
 module.exports = friends;
