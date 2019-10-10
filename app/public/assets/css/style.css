@@ -1,0 +1,16 @@
+body {
+    background-image: url("../images/pink-gradient.jpg");
+    background-size: cover;
+}
+
+.container {
+    background-color: white;
+}
+
+#matchPic {
+    width: 75%; 
+    height: auto; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
